@@ -6,6 +6,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import source.ITestListeneresImplement;
@@ -21,7 +22,7 @@ public class LaunchQuit extends ITestListeneresImplement {
 	//public static WebDriver driver;
 	@BeforeMethod
 	@Parameters("browser")
-	public void launch(String nameofbrowsers )
+	public void launch(@Optional("browser")String nameofbrowsers )
 	{
 		/*driver = new EdgeDriver();
 		driver.get("https://www.amazon.in/");
